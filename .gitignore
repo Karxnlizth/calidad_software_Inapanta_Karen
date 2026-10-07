@@ -1,0 +1,128 @@
+# ==========================================
+# Archivo .gitignore para Node.js, React, NestJS y TypeScript
+# Incluye pruebas unitarias y E2E con Jest, Vitest, Cypress, Playwright
+# Aplica a carpetas raíz, subproyectos y subcarpetas
+# ==========================================
+
+# ------------------------------------------
+# 1. Dependencias y Administradores de Paquetes
+# ------------------------------------------
+**/node_modules/
+**/.pnp
+**/.pnp.js
+**/.yarn/cache
+**/.yarn/unplugged
+**/.yarn/build-state.yml
+**/.yarn/install-state.gz
+**/.pnpm-store/
+
+# ------------------------------------------
+# 2. Archivos de Compilación y Outputs (Builds)
+# ------------------------------------------
+**/dist/
+**/build/
+**/out/
+**/.next/
+**/.nuxt/
+**/.vuepress/dist/
+**/.cache/
+**/.serverless/
+**/.fusebox/
+**/.dynamodb/
+**/.docusaurus/
+
+# Logs y Archivos de Depuración
+**/logs/
+**/*.log
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+**/lerna-debug.log*
+
+# Diagnostic reports (Node.js)
+**/report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# ------------------------------------------
+# 3. Variables de Entorno y Secretos
+# ------------------------------------------
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+**/*.env.signed
+
+# Excepción: Permitir archivo de ejemplo si existe
+!**/.env.example
+
+# ------------------------------------------
+# 4. Pruebas Unitarias y E2E (Jest, NestJS, React, Cypress, Playwright)
+# ------------------------------------------
+# Cobertura de código (Jest / Vitest / Istanbul)
+**/coverage/
+**/.nyc_output/
+**/.vitest/
+**/*.lcov
+
+# Artefactos y reportes de pruebas E2E (Cypress, Playwright, Jest E2E)
+**/cypress/screenshots/
+**/cypress/videos/
+**/cypress/downloads/
+**/test-results/
+**/playwright-report/
+**/blob-report/
+**/playwright/.cache/
+
+# Archivos temporales y de caché creados durante ejecución de pruebas
+**/.jest/
+**/.jest-cache/
+**/.stryker-tmp/
+
+# Databases temporales o de prueba local (SQLite / MongoDB en pruebas E2E)
+**/*.sqlite
+**/*.sqlite-journal
+**/*.db
+
+# ------------------------------------------
+# 5. TypeScript y Caché de Herramientas
+# ------------------------------------------
+**/*.tsbuildinfo
+**/.eslintcache
+**/.stylelintcache
+**/.prettiercache
+**/.rollup.cache/
+**/.swc/
+**/.turbo/
+
+# ------------------------------------------
+# 6. Configuración de IDEs y Editores
+# ------------------------------------------
+# VS Code
+**/.vscode/*
+!**/.vscode/extensions.json
+!**/.vscode/settings.json
+!**/.vscode/tasks.json
+!**/.vscode/launch.json
+
+# WebStorm / JetBrains
+**/.idea/
+**/*.iw/
+**/*.iws/
+**/*.ipr/
+**/*.iml
+
+# Archivos del sistema operativo
+**/.DS_Store
+**/.DS_Store?
+**/._*
+**/.Spotlight-V100
+**/.Trashes
+**/ehthumbs.db
+**/Thumbs.db
+
+# ------------------------------------------
+# 7. Archivos Temporales de NestJS / React
+# ------------------------------------------
+**/.nest/
+**/.vite/
